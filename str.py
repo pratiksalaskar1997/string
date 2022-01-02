@@ -47,7 +47,7 @@ for i in str:
         f2 = True
 print(f1 and f2)
 ==========================================================
-
+# WAP to accept the string if it contains all the vowels if not then print not accepted: 
 str = 'perIotUuik'
 v = 'AEIOU'
 s = set(str.upper()).intersection(set(v))
