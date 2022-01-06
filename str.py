@@ -150,22 +150,5 @@ for j in a:
     else:
         print(j, 'is not present')
 
-#method 2
-from collections import Counter
-
-str1 = 'geeksforgeeks'
-a = input('enter the chracter: ')
-res = {i:j for i,j in dict(Counter(str1)).items() if i in a }
-print(res)
-
-s = 'geeks1234555forgeeks'
-d = '123456789'
-count = 0
-for i in s:
-    for j in d:
-        if j in i:
-            count +=1
-
-print(count)
 
 '''
