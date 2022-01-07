@@ -1,4 +1,4 @@
-'''
+
 # find length of the string in 3 ways:
 #1 len():
 d = 'hello my name is pratik'
@@ -103,6 +103,7 @@ print(a, 'present', str(res),'times')
 
 # number of vowels present in given string:
 
+
 from collections import Counter
 
 s = Counter('geeksforgeeks')
@@ -167,6 +168,3 @@ for i in s:
 
 print(count)
 
-
-
-'''
