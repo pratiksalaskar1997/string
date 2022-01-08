@@ -167,4 +167,20 @@ for i in s:
             count +=1
 
 print(count)
+===================================================================
+s = 'amaama'
+if s[0:((len(s)//2))]== s[len(s)//2:]:
+    print('string is symmetrical')
+if s[0:((len(s) // 2))] == s[(len(s)-1) // 2::-1]:
+    print('string is palindrome')
+else:
+    print('not symmetric as well palindrome')
+======================================================================
+# check if string is binary or not
+s = set('101100h')
+se = {'0', '1'}
+if s == se or s == {'0'} or s == {'1'}:
+    print('binary')
+else:
+    print('not binary')
 
