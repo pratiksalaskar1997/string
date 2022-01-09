@@ -184,3 +184,50 @@ if s == se or s == {'0'} or s == {'1'}:
 else:
     print('not binary')
 
+=================================================================
+
+# uncommon words from two string
+method 1:
+
+a  = 'geeks for geeks'
+b = 'learning from geeks for geeks'
+x = set(a.split())
+y = set(b.split())
+print(x.symmetric_difference(y))
+========================================
+#method2
+def uncommon(a, b):
+    un_comm = [i for i in ''.join(b).split() if i not in ''.join(a).split()]
+    print(un_comm)
+a = 'geeks for geeks'
+b = 'learning from geeks for geeks'
+uncommon(a,b)
+
+a = str(input('enter the string: '))
+x = a.replace(',','/')
+y = x.replace('.',',')
+z = y.replace('/','.')
+print(z)
+
+# permutation of a given string:
+from itertools import permutations
+def perm(s):
+
+    z = permutations(s)
+    for i in z:
+        print(''.join(i))
+s = 'abc'
+perm(s)
+
+# using recursion reverse the string:
+str = 'geeks for geeks'
+str = list(str)
+l = []
+
+
+for i in range(len(str)):
+    l.append(str[i])
+
+for i in range(len(str)):
+    str[i] = l.pop() # condition
+print(''.join(str))
