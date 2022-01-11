@@ -223,11 +223,4 @@ perm(s)
 str = 'geeks for geeks'
 str = list(str)
 l = []
-
-
-for i in range(len(str)):
-    l.append(str[i])
-
-for i in range(len(str)):
-    str[i] = l.pop() # condition
-print(''.join(str))
+===============================================
