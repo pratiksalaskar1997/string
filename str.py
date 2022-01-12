@@ -268,3 +268,25 @@ def IndCheck(n,t):
                 return [i,j]
 print(IndCheck([7,2,11,15],9))
 ============================================
+# Python program to find the character position of Kth word from a list of strings
+#Input : test_list = [“geekforgeeks”, “is”, “best”, “for”, “geeks”], K = 21
+#Output : 0
+#Explanation : 21st index occurs in “geeks” and point to “g” which is 0th element of word.
+
+s = ['geekforgeeks', 'is', 'best', 'for', 'geeks']
+k =22
+a = 0
+x = ''
+for j in s:
+    x += j
+print(''.join(x))
+x = x[k:k+1]
+print('kth letter is -',x)
+for i in range(len(s)):
+     a += len(s[i])
+     if a>k:
+         y = s[i]
+         break
+print('kth index occure in - ',y)
+print('which is,',y.index(x),'th element of word')
+===========================================================
