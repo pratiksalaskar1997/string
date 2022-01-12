@@ -305,3 +305,12 @@ for i in l:
     else:
         print(l.clear())
 ==============================================================
+#Remove punctuation from string
+
+s = 'abc!dh#nf$'
+for i in s:
+    if i.isalpha() == True:
+        print(i, end='')
+        
+ ==========================================================
+
