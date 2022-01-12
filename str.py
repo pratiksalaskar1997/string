@@ -258,3 +258,13 @@ z1 = str(z)
 for q in range(len(z1)):
     x5.append(int(z1[q]))
 print(x5[::-1])
+======================================
+#input : n =[7,2,11,15] and target = t
+#output : [0,1]
+def IndCheck(n,t):
+    for i in range(len(n)):
+        for j in range(i+1,(len(n))):
+            if n[i]+n[j] == t:
+                return [i,j]
+print(IndCheck([7,2,11,15],9))
+============================================
