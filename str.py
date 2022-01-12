@@ -230,3 +230,5 @@ for i in range(len(str)):
 for i in range(len(str)):
     str[i] = l.pop() # condition
 print(''.join(str))
+===============================================
+
