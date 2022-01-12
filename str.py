@@ -290,3 +290,18 @@ for i in range(len(s)):
 print('kth index occure in - ',y)
 print('which is,',y.index(x),'th element of word')
 ===========================================================
+#Input : test_list = [(4, 5, 5, 4), (5, 4, 3)], K = 5, N = 2
+#Output : [(4, 5, 5, 4)]
+
+l = [(4, 5, 5, 4), (5, 4, 3)]
+k = 5
+n = 2
+
+for i in l:
+    if k in i:
+        if  i.count(k) == n:
+            print([i])
+
+    else:
+        print(l.clear())
+==============================================================
