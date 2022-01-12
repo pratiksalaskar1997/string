@@ -231,4 +231,30 @@ for i in range(len(str)):
     str[i] = l.pop() # condition
 print(''.join(str))
 ===============================================
+# WAP to get addition of list of two element after reverse and concatenate:
 
+s1 = [2,4,3]
+s2 = [5,6,4]
+x1=[]
+x2=[]
+x5 = []
+x3 = ''
+x4 = ''
+for i in range(len(s1)):
+    x1.append(s1.pop())
+
+for j in range(len(s2)):
+    x2.append(s2.pop())
+
+for a in range(len(x1)):
+    x3 += str(x1[a])
+print(x3)
+for b in range(len(x2)):
+    x4 += str(x2[b])
+print(x4)
+z = int(x3)+int(x4)
+print(z)
+z1 = str(z)
+for q in range(len(z1)):
+    x5.append(int(z1[q]))
+print(x5[::-1])
