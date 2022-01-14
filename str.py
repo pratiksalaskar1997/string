@@ -342,7 +342,7 @@ for i in s:
 if temp.strip():
     res.append(temp)
 print(res)
-
+==========================================================
 s = 'gfg, is, (best, for), geeks'
 a = [' '.join(s.split())]
 print(a)
@@ -353,7 +353,7 @@ print(res)
 def leftOperator(s):
 leftOperator([1, 2, 3, 4, 5], [0, 1, 2, 3, 4])
 
-
+==========================================================
 s = ([1, 2, 3, 4, 5], [5, 5, 2, 3, 4])
 #print(len(s))
 l = 1
