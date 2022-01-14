@@ -314,3 +314,80 @@ for i in s:
         
  ==========================================================
 
+# WAP to get string after the right and left shift operation:
+
+s = 'geeksforgeeks'
+r = 7
+l = 10
+t = (r-l) % len(s)
+print(t)
+res = s[t:len(s)]+s[:t]
+print(res)
+
+s = 'gfg, is, (best, for), geeks'
+temp = ''
+res = []
+check = 0
+for i in s:
+    if i == '(':
+        check += 1
+    elif i == ')':
+        check -= 1
+    if i == ', ' and check == 0:
+        if temp.strip():
+            res.append(temp)
+        temp = ''
+    else:
+        temp += i
+if temp.strip():
+    res.append(temp)
+print(res)
+
+s = 'gfg, is, (best, for), geeks'
+a = [' '.join(s.split())]
+print(a)
+
+s = (1, 10, 3)
+res = [i for i in range(s[0],s[1]) if i%3==0]
+print(res)
+def leftOperator(s):
+leftOperator([1, 2, 3, 4, 5], [0, 1, 2, 3, 4])
+
+
+s = ([1, 2, 3, 4, 5], [5, 5, 2, 3, 4])
+#print(len(s))
+l = 1
+t =l%len(s)
+a = s[0]
+b = s[1]
+res = b[t:len(a)]
+if res == (a[:(len(a)-1)]):
+    print('True')
+else:
+    print('false')
+
+#(["Adam", "Sarah", "Malcolm"]) ➞ "AMS"
+s = ['Adam', 'Sarah', 'Malcolm']
+res = sorted(i[0] for i in s)
+print(''.join(res))
+
+#check isogram:
+s =("AlgorismM s")
+ss = set(s.lower())
+
+if len(s) == len(ss):
+    print('isogram')
+elif ' ' in ss:
+    print('not valid')
+else:
+    print('not isogram')
+===========================================================
+s = 'abc'
+res = sorted(s)
+print(type(res))
+if s == '':
+    print('entered some character')
+elif list(s) == res:
+    print('true')
+else:
+    print('false')
