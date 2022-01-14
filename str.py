@@ -374,7 +374,8 @@ if res == (a[:(len(a)-1)]):
 else:
     print('false')
 =========================================================================
-#(["Adam", "Sarah", "Malcolm"]) ➞ "AMS"
+# implement this: (["Adam", "Sarah", "Malcolm"]) ➞ "AMS"
+
 s = ['Adam', 'Sarah', 'Malcolm']
 res = sorted(i[0] for i in s)
 print(''.join(res))
@@ -391,6 +392,8 @@ elif ' ' in ss:
 else:
     print('not isogram')
 ===========================================================
+# WAP to check the string string is in sorted formate and if yes the print 'true' else 'false' 
+also if string contains two words then it is not valid:
 s = 'abc'
 res = sorted(s)
 print(type(res))
