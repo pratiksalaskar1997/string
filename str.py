@@ -343,17 +343,25 @@ if temp.strip():
     res.append(temp)
 print(res)
 ==========================================================
+# add string in list without comma:
+
 s = 'gfg, is, (best, for), geeks'
 a = [' '.join(s.split())]
 print(a)
+========================================================
+# check range of number and print number which is divisible by 3:
 
 s = (1, 10, 3)
 res = [i for i in range(s[0],s[1]) if i%3==0]
 print(res)
 def leftOperator(s):
-leftOperator([1, 2, 3, 4, 5], [0, 1, 2, 3, 4])
+
 
 ==========================================================
+# as we see below if list of first elements shifted right by 1 and the number in second list same then 
+print 'True' otherwise 'False':
+# rightOperator([1, 2, 3, 4, 5], [0, 1, 2, 3, 4])
+
 s = ([1, 2, 3, 4, 5], [5, 5, 2, 3, 4])
 #print(len(s))
 l = 1
@@ -365,13 +373,14 @@ if res == (a[:(len(a)-1)]):
     print('True')
 else:
     print('false')
-
+=========================================================================
 #(["Adam", "Sarah", "Malcolm"]) ➞ "AMS"
 s = ['Adam', 'Sarah', 'Malcolm']
 res = sorted(i[0] for i in s)
 print(''.join(res))
 ==========================================================
 #check isogram:
+
 s =("AlgorismM s")
 ss = set(s.lower())
 
