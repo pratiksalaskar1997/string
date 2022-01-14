@@ -370,7 +370,7 @@ else:
 s = ['Adam', 'Sarah', 'Malcolm']
 res = sorted(i[0] for i in s)
 print(''.join(res))
-
+==========================================================
 #check isogram:
 s =("AlgorismM s")
 ss = set(s.lower())
