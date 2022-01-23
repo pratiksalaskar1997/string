@@ -1,15 +1,4 @@
 
-# find length of the string in 3 ways:
-#1 len():
-d = 'hello my name is pratik'
-print(len(d))
-
-#2 for loop:
-d = 'hello my name is pratik'
-c = 0
-for i in d:
-    c += 1
-print(c)
 
 #3 while loop:
 #def findLen(str):
