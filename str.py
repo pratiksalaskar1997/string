@@ -2,6 +2,7 @@
 #1 len():
 d = 'hello my name is pratik'
 print(len(d))
+
 ==============================================
 #2 for loop:
 d = 'hello my name is pratik'
