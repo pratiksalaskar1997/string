@@ -1,3 +1,7 @@
+# find length of the string in 3 ways:
+#1 len():
+d = 'hello my name is pratik'
+print(len(d))
 
 ==============================================
 #2 for loop:
