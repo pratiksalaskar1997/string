@@ -32,6 +32,7 @@ for i in d:
     c += 1
 print(c)
 
+
 #3 while loop:
 #def findLen(str):
 str = 'hello my name is pratik'
