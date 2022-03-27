@@ -424,3 +424,282 @@ elif list(s) == res:
     print('true')
 else:
     print('false')
+================================================================================
+
+## 1. Program to print duplicates from a list of integers
+
+s = [10, 20, 30, 20, 20, 30, 40, 50, -20, 60, 60, -20, -20]
+list(set([i for i in s if s.count(i)!=1]))
+
+=============================================================================
+## 2. Replace index elements with elements in Other List
+
+a = ['Gfg', 'is', 'best']
+b = [0, 1, 2, 1, 0, 0, 0, 2, 1, 1, 2, 0]
+
+a1 = {a.index(i):i for i in a}
+res = [a1[j] for j in b] 
+res
+========================================================================
+## 3. Split String on vowels
+
+
+l = 'GFGaBst'
+v = ['a','e','i','o','u','A','E','I','O','U']
+
+
+[l.split(i) for i in v if l.find(i)!= -1]
+
+============================================================================
+## 4. Convert binary to string using Python
+
+c = 10001111100101110010111010111110011
+
+
+==========================================================================
+
+## 5. Remove K length Duplicates from String
+
+k = 3
+d = 'geeksforfreeksfo'
+
+m = set()
+res = []
+for i in range(0,len(d)-k):
+    #slicing k lenght sub string
+    sub = d[i:i+k]
+    if sub not in m:
+        m.add(sub)
+        res.append(sub)
+res = ''.join([res[i] for i in range(0,len(res),k)])
+res
+        
+============================================================================
+## 8. remove all the duplicates from string
+
+s = 'geeksforgeeks'
+
+#1 method:
+''.join(set(s))
+
+#2 method:
+from collections import Counter
+
+''.join(Counter(s).keys())
+
+#3 method:
+
+l = []
+for i in s:
+    if i in l:
+        pass
+    else:
+        l.append(i)
+''.join(l)
+
+#4 method:
+
+''.join({i for i in s})
+
+#5 method
+''.join({i[1] for i in enumerate(s)})
+
+#6 method
+from collections import OrderedDict
+''.join(OrderedDict.fromkeys(s).keys())
+
+=========================================================================
+## 9. least frequent character in a string
+
+#1 method 
+
+[i for i in Counter(s).items() if i[1]==min(Counter(s).values())][0][0]
+
+d = {}
+for i in s:
+    if i in d:
+        d[i]+=1
+    else:
+        d[i]=1
+d
+
+# to get min least frequent character:
+for i in d.items():
+    if i[1] == min(d.values()):
+        print('least frequent chracter in given string is:',i[0])
+        break
+
+# important key function:
+min(d, key=d.get)
+
+# 3 using counter method
+min(d,key=Counter(s).get)
+
+===============================================================================
+## 10. check if a string is binaary or not
+
+s = '11001111'
+
+#1 method
+if set(s)=={'0','1'}:
+    print('str is binary')
+else:
+    print('not binary')
+
+#2 list comprehension
+l =[i for i in s if i != '0' and i!='1']
+print(l)
+if l == []:
+    print('bin str')
+else:
+    print('not bin str')
+
+#3 method for loop:
+x = []
+for i in s:
+    if i == '0' or i == '1':
+        x.append(i)
+if len(x)==len(s):
+    print('bin str')
+else:
+    print('not bin str')
+=========================================================================
+    
+## 11. find all close match of input string from a list
+
+p = ['ape','apple','peanch','puppy']
+ip = 'appel'
+
+#1 method
+cm = [] 
+for i in p:
+    if len(i)<=3:
+        if i[:2]==ip[:2] :
+            cm.append(i)
+    elif len(i)>3:
+        if i[:3]==ip[:3] :
+            cm.append(i)
+print(cm)
+            
+
+#2 method:
+from difflib import get_close_matches
+
+
+get_close_matches(ip,p)
+
+str1 = 'pratik santosh salaskar'
+str2 = 'Pratik Santosh Salaskar '
+
+==================================================================================
+## 12. check two string maches each other with percentage
+
+from difflib import SequenceMatcher
+
+# create an object
+sq=SequenceMatcher(a=str1,b=str2)
+
+sq.ratio()*100
+
+==================================================================================
+## 13. find uncommon word from two string
+
+str1 = 'my name is pratik'
+str2 = 'ur name is salaskar'
+
+#1 method using set:
+set(str1.split()).symmetric_difference(set(str2.split()))
+
+#2 method using list comprehension:
+[i for i in str1.split() if i not in str2.split()]+[j for j in str2.split() if j not in str1.split()]
+
+
+#3 method using for loop:
+res = []
+for i in str1.split():
+    if i not in str2.split():
+        res.append(i)
+for j in str2.split():
+    if j not in str1.split():
+        res.append(j)
+print(res)
+=============================================================================
+## 14. permutation of given string using in built function
+
+s = 'ABC'
+
+from itertools import permutations
+
+#1 method:
+p = permutations(s)
+for i in list(p):
+    print(''.join(i))
+
+    ==================================================================================
+## 15. substring presence in string list
+
+str1 = ['pratik','santosh','salskar']
+
+str2 = ['p','z','r']
+
+#1 method:
+c = []
+for i in str1:
+    if len(set(str2).intersection({j for j in i}))>=1:
+        c.append('True')
+    else:
+        c.append('False')
+
+#2 method
+[True if len(set(str2).intersection({j for j in i}))>=1 else False for i in str1]
+
+========================================================================================
+# 16. all substring frequency in string
+
+t = 'ababa'
+
+#1 method
+d={}
+for i in range(1,len(t)+1):
+   d[t[:i]] = t.count(t[:i])
+for j in range(2,len(t)+1):
+    d[t[1:j]]=t.count(t[:j])
+d
+
+=========================================================================================
+## 17. maximum consecutive sunstring occurance:
+
+s = 'geeks for geeksgeeks are three geeksgeeksgeeks'
+
+ss = 'geeks\w+'
+
+
+import re
+
+res=re.findall(ss,s)
+
+max(res)
+
+print('frequency of occ.:',len(max(res))//len('geeks'))
+
+============================================================================================
+## 18. maximum occuring substring from list
+
+s = 'gfgakjgisgfgksfnjabestfwefnigfglkefjngfgisksfnj'
+
+ss = ['gfg','is','best']
+
+l = []
+
+for j in range(len(ss)):
+    for i in range(len(s)):
+        if ss[j]==s[i:(len(ss[j])+i)]:
+            l.append(ss[j])
+d = {i:l.count(i) for i in l}
+[i for i in d.items() if i[1]==max(d.values())][0][0]
+
+l1=[]
+for i in Counter(l).items():
+    l1.append(i[1])
+
+max(l1)
